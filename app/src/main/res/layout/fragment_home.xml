@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".vistas.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        style="@style/TextAppearance.Material3.DisplayLarge"
+        android:id="@+id/myTitleTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Estás en Home"
-        android:textSize="30sp" />
+        android:text="Temperaturas"
+        android:layout_marginTop="30sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="3"
+            android:gravity="center">
+
+            <TableRow>
+                <TextView
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:text="Temperatura Actual"
+                    android:layout_width="match_parent"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15sp"
+                    android:layout_marginLeft="10sp"/>
+
+                <TextView
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:id="@+id/textViewTemperature"
+                    android:text="0"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:layout_marginLeft="50sp"
+                    android:layout_marginRight="0sp"/>
+
+                <TextView
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:padding="3dip"
+                    android:text="°C" />
+            </TableRow>
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </FrameLayout>
